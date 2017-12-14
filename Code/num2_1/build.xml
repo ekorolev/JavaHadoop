@@ -16,7 +16,7 @@
 
 	<target name="compile" depends="mkdirs">
 		<javac destdir="${class.dir}" classpath="${classpath}" includeantruntime="false" debug="true">
-			<src path="src" />
+			<src path="Source" />
 			<compilerarg value="-Xlint:deprecation" />
 		</javac>
 	</target>
