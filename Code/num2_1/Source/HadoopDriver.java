@@ -29,8 +29,8 @@ public class HadoopDriver extends Configured implements Tool {
         job.setJobName("WordCounter");
         FileInputFormat.addInputPath(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
-        job.setMapperClass(WordMapper.class);
-        job.setReducerClass(Summer.class);
+        job.setMapperClass(Mapper.class);
+        job.setReducerClass(Reducer.class);
         job.setMapOutputKeyClass(Text.class);
         job.setMapOutputValueClass(IntWritable.class);
 
